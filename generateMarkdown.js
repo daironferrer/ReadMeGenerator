@@ -31,7 +31,41 @@ const renderBadges = (badge) => {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${renderBadges(data.license)}
 
+  ## Table of Contents
+
+  * [Title] (#projectTitle)
+  * [Description] (#projectDes)
+  * [Installation] (#projectInstall)
+  * [License] (#projectLicense)
+  * [Collaboration] (#projectCollab)
+  * [Contact] (#contact)
+  
+  ##Title
+  ${data.projectTitle}
+
+  ##Description 
+  ${data.projectDes}
+
+  ##Installation
+  ${data.projectInstall}
+
+  ##License
+  ${data.projectLicense}
+
+  ##Collaboration
+  ${data.projectCollab}
+
+  ##Contact
+  <p> If you would like to contact me with any questions, reach out to me at </p>
+  ${data.projectEmail}
+
+  <p> Or chechk out my GitHub </p>
+  ${data.projectGit}
+
+
+`;
 }
 
 module.exports = generateMarkdown;
